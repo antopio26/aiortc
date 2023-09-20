@@ -104,7 +104,7 @@ class H264PayloadDescriptor:
 
 class H264Decoder(Decoder):
     def __init__(self) -> None:
-        self.codec = av.CodecContext.create("h264", "r")
+        self.codec = av.CodecContext.create("h264_cuvid", "r")
 
     def decode(self, encoded_frame: JitterFrame) -> List[Frame]:
         try:
